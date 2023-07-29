@@ -36,8 +36,7 @@ create table if not exists Track(
 track_id serial primary key,
 name varchar (100) not null,
 duration time not null unique,
-album_id serial references Albums(album_id),
-collection_id serial references Collection(collection_id)
+album_id serial references Albums(album_id)
 );
 
 create table if not exists TrackCollection(
